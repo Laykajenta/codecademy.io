@@ -1,0 +1,128 @@
+/* NAVBAR */
+nav {
+  background: #cdd49c;
+  color: rgb(248, 243, 235);
+z-index: 100;
+  position: fixed;
+  top: 0px;
+
+  width: 100vw;
+  
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+    color: rgb(67, 49, 113);
+  font-size: 2rem;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+ 
+}
+
+.nav-item {
+  position: relative;
+   
+}
+
+.nav-links a {
+ 
+    text-decoration: none;
+    color: rgb(67, 49, 113);
+    padding-right: 20px;
+}
+
+/* DROPDOWN */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #cdd49c;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 150px;
+  left: 0;
+}
+
+
+.dropdown a {
+  display: block;
+  padding: 5px 10px;
+}
+
+/* vis dropdown på hover (desktop) */
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: rgb(248, 243, 235);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* animasjon til X */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBIL */
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #cdd49c;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* dropdown på mobil */
+  .nav-item:hover .dropdown {
+    display: none;
+  }
+
+  .dropdown {
+    position: static;
+  }
+
+  .nav-item.active .dropdown {
+    display: block;
+  }
+}

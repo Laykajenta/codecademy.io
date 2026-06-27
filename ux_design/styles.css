@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(248, 243, 235);
+    margin: 0;
+}
+
+
+
+main{
+    position: relative;
+    top: 40px;
+}
+a{
+    text-decoration: none;
+     color: #39854d;
+     font-weight: bold;
+
+}
+
+.overskrift{
+    color: #39854d;
+}
+.heading-link{
+    color: #b7ddc1;
+    text-decoration: none;
+}
+.titles{
+   font-size: 3em;
+   background-color: #b7ddc1;
+   color: #39854d;
+}
+
+img{
+    width: 75vw;
+}
+
+.memos1, .memos2{
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.memos1{
+    background-color: rgb(35, 21, 50);
+    color: #cdd49c;
+}
+
+.memos2{
+    color: #ccd47d;
+    background-color: rgb(67, 49, 113);
+}
+
+.bullet{
+    list-style: square;
+    
+}
+
